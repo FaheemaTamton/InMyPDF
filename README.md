@@ -208,11 +208,11 @@ The project focuses on:
 AI & ML Engineer
 Focused on AI systems, RAG architectures, multimodal AI, and intelligent healthcare technologies.
 
-https://faheematamton.github.io/Faheema_Tamton_Portfolio/
-GitHub: https://github.com/FaheemaTamton
+🔗 Portfolio
+
 
 ---
 
-# 📜 License
+#  License
 
-This project is developed for educational and portfolio purposes.
+This project is developed for educational  purposes.
