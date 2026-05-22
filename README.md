@@ -4,7 +4,7 @@ InMyPDF is an AI-powered Agentic Retrieval-Augmented Generation (RAG) system des
 
 The platform processes text, tables, and image-based content from PDFs, converts them into vector embeddings, and enables users to ask natural language questions through an intelligent AI agent interface.
 
-Built using FastAPI, LangChain, FAISS, Sentence Transformers, OpenAI models, and multimodal document ingestion pipelines.
+
 
 ---
 
