@@ -192,6 +192,12 @@ Unlike traditional chatbots, InMyPDF answers questions based on uploaded documen
 
 InMyPDF aims to simplify document understanding through Agentic AI systems and Retrieval-Augmented Generation architectures.
 
+The project focuses on:
+- Intelligent document querying
+- Multimodal AI systems
+- Agentic workflows
+- Semantic retrieval systems
+- Human-AI interaction
 
 
 ---
