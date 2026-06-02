@@ -8,7 +8,10 @@ async function uploadPDF() {
     const status = document.getElementById("uploadStatus");
 
     if (!file) {
-       
+        status.className = "alert alert-danger";
+        status.innerText = "Select a PDF first";
+        status.classList.remove("d-none");
+        return;
     }
 
     const fd = new FormData();
