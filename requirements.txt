@@ -1,1 +1,12 @@
-
+flask
+pypdf
+faiss-cpu
+sentence-transformers
+google-generativeai
+langchain
+langchain-text-splitters
+openai
+fastapi
+uvicorn
+python-multipart
+weaviate-client
