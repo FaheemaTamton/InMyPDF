@@ -1,4 +1,4 @@
-let uploaded = false;
+
 
 // ====================
 // PDF Upload
