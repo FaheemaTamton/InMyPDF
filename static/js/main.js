@@ -1,18 +1,4 @@
-let uploaded = false;
 
-// ====================
-// PDF Upload
-// ====================
-async function uploadPDF() {
-    const file = document.getElementById("pdf").files[0];
-    const status = document.getElementById("uploadStatus");
-
-    if (!file) {
-        status.className = "alert alert-danger";
-        status.innerText = "Select a PDF first";
-        status.classList.remove("d-none");
-        return;
-    }
 
     const fd = new FormData();
     fd.append("file", file);  // IMPORTANT: must match FastAPI param name
