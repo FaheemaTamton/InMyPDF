@@ -1,22 +1,6 @@
 #  InMyPDF – Agentic Multimodal RAG System
 
-InMyPDF is an AI-powered Agentic Retrieval-Augmented Generation (RAG) system designed to intelligently understand and query PDF documents using multimodal ingestion pipelines, vector search, and LLM-powered reasoning.
 
-The platform processes text, tables, and image-based content from PDFs, converts them into vector embeddings, and enables users to ask natural language questions through an intelligent AI agent interface.
-
-Built using FastAPI, LangChain, FAISS, Sentence Transformers, OpenAI models, and multimodal document ingestion pipelines.
-
----
-
-#  Features
-
-##  Multimodal PDF Understanding
-- Extracts:
-  - Plain text
-  - Tables
-  - Image-based text
-- Supports intelligent document parsing
-- Handles complex PDF structures
 
 ##  Agentic RAG Pipeline
 - Retrieval-Augmented Generation workflow
