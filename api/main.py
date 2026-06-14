@@ -17,17 +17,16 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 # ------------------------------------ #
 
+# Allow frontend / testing tools
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-# Mount static folder
-app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
-# Serve index.html at root
-@app.get("/")
-def read_root():
-    return FileResponse(os.path.join(TEMPLATES_DIR, "index.html"))
-
-# In-memory store
-VECTOR_STORE = None
 
 
 @app.post("/api/upload")
