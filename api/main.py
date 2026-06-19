@@ -1,8 +1,3 @@
-from fastapi import FastAPI, UploadFile, File
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
-from fastapi.staticfiles import StaticFiles
-import os
 
 from rag.pipeline import process_pdf, answer_query
 
