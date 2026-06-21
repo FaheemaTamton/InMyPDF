@@ -26,7 +26,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Mount static folder
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
+# Serve index.html at root
+@app.get("/")
+def read_root():
+    return FileResponse(os.path.join(TEMPLATES_DIR, "index.html"))
+
+# In-memory store
+VECTOR_STORE = None
 
 
 @app.post("/api/upload")
@@ -43,11 +52,3 @@ async def ingest_pdf(file: UploadFile = File(...)):
 
     return {"success": True, "message": "PDF ingested successfully"}
 
-
-@app.post("/api/ask")
-async def query_rag(question: str = File(...)):
-    if VECTOR_STORE is None:
-        return {"answer": "No document ingested yet"}
-
-    answer = answer_query(VECTOR_STORE, question)
-    return {"answer": answer}
