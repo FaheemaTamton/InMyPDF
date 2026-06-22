@@ -7,7 +7,15 @@ The platform processes text, tables, and image-based content from PDFs, converts
 Built using FastAPI, LangChain, FAISS, Sentence Transformers, OpenAI models, and multimodal document ingestion pipelines.
 
 ---
+#  Features
 
+##  Multimodal PDF Understanding
+- Extracts:
+  - Plain text
+  - Tables
+  - Image-based text
+- Supports intelligent document parsing
+- Handles complex PDF structures
 
 
 
