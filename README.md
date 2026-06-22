@@ -8,15 +8,7 @@ Built using FastAPI, LangChain, FAISS, Sentence Transformers, OpenAI models, and
 
 ---
 
-#  Features
 
-##  Multimodal PDF Understanding
-- Extracts:
-  - Plain text
-  - Tables
-  - Image-based text
-- Supports intelligent document parsing
-- Handles complex PDF structures
 
 
 ##  Agentic RAG Pipeline
