@@ -53,3 +53,10 @@ async def ingest_pdf(file: UploadFile = File(...)):
     return {"success": True, "message": "PDF ingested successfully"}
 
 
+@app.post("/api/ask")
+async def query_rag(question: str = File(...)):
+    if VECTOR_STORE is None:
+        return {"answer": "No document ingested yet"}
+
+    answer = answer_query(VECTOR_STORE, question)
+    return {"answer": answer}
