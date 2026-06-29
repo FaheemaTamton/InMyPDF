@@ -38,6 +38,19 @@ def read_root():
 VECTOR_STORE = None
 
 
+@app.post("/api/upload")
+async def ingest_pdf(file: UploadFile = File(...)):
+    global VECTOR_STORE
+
+    if not file.filename.endswith(".pdf"):
+        return {"success": False, "message": "Only PDF files are supported"}
+
+    VECTOR_STORE = process_pdf(file.file)
+
+    if VECTOR_STORE is None:
+        return {"success": False, "message": "Failed to process PDF"}
+
+    return {"success": True, "message": "PDF ingested successfully"}
 
 
 @app.post("/api/ask")
