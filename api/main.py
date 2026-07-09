@@ -34,6 +34,14 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 def read_root():
     return FileResponse(os.path.join(TEMPLATES_DIR, "index.html"))
 
+# In-memory store
+VECTOR_STORE = None
+
+
+@app.post("/api/upload")
+async def ingest_pdf(file: UploadFile = File(...)):
+    global VECTOR_STORE
+
     if not file.filename.endswith(".pdf"):
         return {"success": False, "message": "Only PDF files are supported"}
 
